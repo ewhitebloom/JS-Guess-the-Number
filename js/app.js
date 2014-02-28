@@ -1,14 +1,17 @@
-var random = Math.floor((Math.random()*100)+1);
+var random = Math.floor((Math.random()*10)+1);
 
 var name = prompt("What's your name?");
 
-var guess = prompt("Hi " + name + ", guess a number.");
+var guess = prompt("Hi " + name + ", guess a number.");;
 
-if(guess == random){
-  alert("You won 10 billion dollars!!!!")
+while (guess != random){
+ var guess = prompt("Guess again:");
+ if (guess > random ){
+   alert('Too high!.');
+ }
+ if (guess < random) {
+  alert('Too Low!');
 }
-else {
-  alert('Sorry you are a loser .');
 }
 
-
+alert('Correct. You won a billion dollars.');
